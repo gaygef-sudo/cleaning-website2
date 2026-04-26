@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed! — Pristine Pair Cleaning and Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #0d4f8c 0%, #1a6fbf 60%, #1e8fcf 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 56px 48px;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.22);
+    animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes popIn { from { opacity:0; transform:scale(0.85); } to { opacity:1; transform:scale(1); } }
+  .check-circle {
+    width: 88px; height: 88px;
+    background: linear-gradient(135deg, #2e7d32, #4aab97);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 2.6rem;
+    box-shadow: 0 8px 30px rgba(46,125,50,0.30);
+    animation: bounceIn 0.6s 0.2s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes bounceIn { from { opacity:0; transform:scale(0.5); } to { opacity:1; transform:scale(1); } }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a2a38;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: #3a5568;
+    margin-bottom: 32px;
+    line-height: 1.65;
+  }
+  .next-steps {
+    background: #f5fafd;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+  .next-steps h3 {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b8fa0;
+    margin-bottom: 16px;
+  }
+  .next-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #3a5568;
+    font-weight: 600;
+  }
+  .next-step-item:last-child { margin-bottom: 0; }
+  .step-dot {
+    width: 28px; min-width: 28px; height: 28px;
+    background: linear-gradient(135deg, #1a6fbf, #0d4f8c);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-top: 1px;
+  }
+  .receipt-note {
+    background: #d6eef8;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.88rem;
+    color: #1a6fbf;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .home-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1a6fbf, #0d4f8c);
+    color: white;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 4px 20px rgba(26,111,191,0.30);
+    transition: all 0.2s;
+  }
+  .home-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(26,111,191,0.40); }
+  .logo { max-height: 70px; margin-bottom: 24px; display: block; margin-left: auto; margin-right: auto; }
+  @media (max-width: 520px) {
+    .card { padding: 36px 24px; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="/logo.jpg" alt="Pristine Pair Cleaning and Care" class="logo" onerror="this.style.display='none'">
+
+  <div class="check-circle">✓</div>
+
+  <h1>Booking Confirmed!</h1>
+  <p class="subtitle">
+    Your payment was received and your cleaning appointment is secured.<br>
+    We can't wait to make your home shine! ✨
+  </p>
+
+  <div class="receipt-note">
+    📧 A payment receipt has been sent to your email by Stripe.
+  </div>
+
+  <div class="next-steps">
+    <h3>What happens next</h3>
+    <div class="next-step-item">
+      <div class="step-dot">1</div>
+      <div>We'll call or text you within <strong>24 hours</strong> to confirm your appointment date and time.</div>
+    </div>
+    <div class="next-step-item">
+      <div class="step-dot">2</div>
+      <div>We'll arrive on time, fully equipped, and ready to give your home the Pristine Pair treatment.</div>
+    </div>
+    <div class="next-step-item">
+      <div class="step-dot">3</div>
+      <div>Sit back, relax, and enjoy a spotless home — <em>"We clean up quick and get out of your hair."</em></div>
+    </div>
+  </div>
+
+  <a href="/" class="home-btn">← Back to Home</a>
+</div>
+</body>
+</html>

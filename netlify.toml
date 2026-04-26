@@ -1,0 +1,46 @@
+# netlify.toml
+# Pristine Pair Cleaning and Care — Netlify Configuration
+
+[build]
+  # Your site's HTML/assets live in the root or public folder
+  publish = "public"
+
+  # Netlify auto-discovers functions in this folder
+  functions = "netlify/functions"
+
+[functions]
+  # Node.js runtime for all functions
+  node_bundler = "esbuild"
+
+# ── Redirects ──
+# Make /success and /cancel work as clean URLs (without .html)
+[[redirects]]
+  from   = "/success"
+  to     = "/success.html"
+  status = 200
+
+[[redirects]]
+  from   = "/cancel"
+  to     = "/cancel.html"
+  status = 200
+
+# Serve the main site from the root
+[[redirects]]
+  from   = "/"
+  to     = "/index.html"
+  status = 200
+
+# ── Security Headers ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
+
+# Stripe webhook — allow raw body for signature verification
+[[headers]]
+  for = "/.netlify/functions/stripe-webhook"
+  [headers.values]
+    Content-Type = "application/json"

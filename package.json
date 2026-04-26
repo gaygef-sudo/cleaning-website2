@@ -1,0 +1,20 @@
+{
+  "name": "pristine-pair-cleaning",
+  "version": "2.0.0",
+  "description": "Pristine Pair Cleaning — Full booking system with Stripe, Google Sheets, and Google Calendar",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0",
+    "googleapis": "^140.0.0"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
